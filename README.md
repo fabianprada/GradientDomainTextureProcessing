@@ -45,6 +45,13 @@ View a demo of this applications from:
 
 http://www.cs.jhu.edu/~fpradan1/code/
 
+-----------------------------------------------------------------
+ 
+JITTERING
+
+The clipping of the texture atlas triangles and the texture grid can produce elements with arbitrary small area and lead to degenerate systems, e.g., when a seam vertex lie exactly on a grid line). This is not the generally the case. If you experience this beahaviour enable the --jitter flag to add a random perturbation that improves vertex positioning.
+
+
 
 
 
