@@ -1,6 +1,5 @@
 # GradientDomainTextureProcessing
 
------------------------------------------------------------------
 INSTALLATION
 
 This code was compiled and tested on Windows using Visual Studio 2017, and on Linux using GCC 5.5. 
@@ -8,7 +7,6 @@ This code was compiled and tested on Windows using Visual Studio 2017, and on Li
 To compile on Windows copy /include and /lib from 4Windows.zip to the main directory, and build the applications from the provided solution file. Add the content of /dll to /x64/Release to run the applications.
 
 To compile in Linux, install PNG, GLEW and GLUT libraries on your system, and build the binaries from the Makefile provided for each application. 
------------------------------------------------------------------
 
 SUPPORTED FILE FORMATS
 
@@ -17,8 +15,7 @@ Meshes. The input. ply mesh must store uv-coordiante per triangle corner . Meshe
 Textures. For color textures the supported format is .png. For normal textures we use a binary file with the extension. normap. This stores a two-dimensional array where each normal correspond to a triplet of double precision numbers.
 
 Tangent Vector Fields. Vector fields are stored in binary files with extension. vf. This stores a one-dimensional array where each tangent vector corresponds to a pair of double precision numbers.
------------------------------------------------------------------
- 
+
 APPLICATIONS
 
 
@@ -37,16 +34,13 @@ LineIntegralConvolution --mesh mesh.ply --major(default)/--minor/--vf vectorFiel
 
 
 Run each application with no parameters to print the command line options.
------------------------------------------------------------------
- 
+
 DEMO
 
 View a demo of this applications from: 
 
 http://www.cs.jhu.edu/~fpradan1/code/
 
------------------------------------------------------------------
- 
 JITTERING
 
 The clipping of the texture atlas triangles and the texture grid can produce elements with arbitrary small area and lead to degenerate systems, e.g., when a seam vertex lie exactly on a grid line). This is not the generally the case. If you experience this beahaviour enable the --jitter flag to add a random perturbation that improves vertex positioning.
