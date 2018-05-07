@@ -749,9 +749,9 @@ void LineConvolution<Real>::InitializeVisualization(const int width, const int h
 		}
 	}
 
-	visualization.callBacks.push_back(Visualization::KeyboardCallBack(&visualization, 'f', "convolution weight", "Value", ConvolutionWeightCallBack));
-	visualization.callBacks.push_back(Visualization::KeyboardCallBack(&visualization, 'g', "sharpenning weight", "Value", SharpenningWeightCallBack));
-	visualization.callBacks.push_back(Visualization::KeyboardCallBack(&visualization, 'y', "stiffness weight", "Value", StiffnessWeightCallBack));
+	visualization.callBacks.push_back(Visualization::KeyboardCallBack(&visualization, 'f', "convolution weight", "Convolution Weight", ConvolutionWeightCallBack));
+	visualization.callBacks.push_back(Visualization::KeyboardCallBack(&visualization, 'g', "sharpeness weight", "Sharpness Weight", SharpenningWeightCallBack));
+	visualization.callBacks.push_back(Visualization::KeyboardCallBack(&visualization, 'y', "stiffness weight", "Stiffness Weight", StiffnessWeightCallBack));
 	visualization.callBacks.push_back(Visualization::KeyboardCallBack(&visualization, 's', "export texture", "Output Texture", ExportTextureCallBack));
 	visualization.callBacks.push_back(Visualization::KeyboardCallBack(&visualization, 'j', "toggle update", StopUpdateCallBack));
 
