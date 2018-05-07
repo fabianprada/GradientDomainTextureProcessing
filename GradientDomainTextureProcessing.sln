@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TextureFiltering", "TextureFiltering\TextureFiltering.vcxproj", "{C6ABBF5D-BB74-4812-AB52-973D8B76A266}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Geodesics", "Geodesics\Geodesics.vcxproj", "{CC79FFAF-4BF9-4A11-94EA-D44BCC5D80F4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LineIntegralConvolution", "LineIntergralConvolution\LineIntegralConvolution.vcxproj", "{53350EE4-5B9C-4977-8E91-4FE6E84D9E38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6ABBF5D-BB74-4812-AB52-973D8B76A266}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C6ABBF5D-BB74-4812-AB52-973D8B76A266}.Debug|Win32.Build.0 = Debug|Win32
+		{C6ABBF5D-BB74-4812-AB52-973D8B76A266}.Debug|x64.ActiveCfg = Debug|x64
+		{C6ABBF5D-BB74-4812-AB52-973D8B76A266}.Debug|x64.Build.0 = Debug|x64
+		{C6ABBF5D-BB74-4812-AB52-973D8B76A266}.Release|Win32.ActiveCfg = Release|Win32
+		{C6ABBF5D-BB74-4812-AB52-973D8B76A266}.Release|Win32.Build.0 = Release|Win32
+		{C6ABBF5D-BB74-4812-AB52-973D8B76A266}.Release|x64.ActiveCfg = Release|x64
+		{C6ABBF5D-BB74-4812-AB52-973D8B76A266}.Release|x64.Build.0 = Release|x64
+		{CC79FFAF-4BF9-4A11-94EA-D44BCC5D80F4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC79FFAF-4BF9-4A11-94EA-D44BCC5D80F4}.Debug|Win32.Build.0 = Debug|Win32
+		{CC79FFAF-4BF9-4A11-94EA-D44BCC5D80F4}.Debug|x64.ActiveCfg = Debug|x64
+		{CC79FFAF-4BF9-4A11-94EA-D44BCC5D80F4}.Debug|x64.Build.0 = Debug|x64
+		{CC79FFAF-4BF9-4A11-94EA-D44BCC5D80F4}.Release|Win32.ActiveCfg = Release|Win32
+		{CC79FFAF-4BF9-4A11-94EA-D44BCC5D80F4}.Release|Win32.Build.0 = Release|Win32
+		{CC79FFAF-4BF9-4A11-94EA-D44BCC5D80F4}.Release|x64.ActiveCfg = Release|x64
+		{CC79FFAF-4BF9-4A11-94EA-D44BCC5D80F4}.Release|x64.Build.0 = Release|x64
+		{53350EE4-5B9C-4977-8E91-4FE6E84D9E38}.Debug|Win32.ActiveCfg = Debug|Win32
+		{53350EE4-5B9C-4977-8E91-4FE6E84D9E38}.Debug|Win32.Build.0 = Debug|Win32
+		{53350EE4-5B9C-4977-8E91-4FE6E84D9E38}.Debug|x64.ActiveCfg = Debug|x64
+		{53350EE4-5B9C-4977-8E91-4FE6E84D9E38}.Debug|x64.Build.0 = Debug|x64
+		{53350EE4-5B9C-4977-8E91-4FE6E84D9E38}.Release|Win32.ActiveCfg = Release|Win32
+		{53350EE4-5B9C-4977-8E91-4FE6E84D9E38}.Release|Win32.Build.0 = Release|Win32
+		{53350EE4-5B9C-4977-8E91-4FE6E84D9E38}.Release|x64.ActiveCfg = Release|x64
+		{53350EE4-5B9C-4977-8E91-4FE6E84D9E38}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C297850-8530-4644-A102-60D5DCB98848}
+	EndGlobalSection
+EndGlobal
