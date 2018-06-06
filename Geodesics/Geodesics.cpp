@@ -439,6 +439,7 @@ void Geodesics<Real>::MouseFunc(int button, int state, int x, int y) {
 				UpdateOutputBuffer(exactGeodesicDistanceSolution);
 			}
 			else {
+				cycleCount = 0;
 				UpdateSolution();
 				UpdateOutputBuffer(multigridGeodesicDistanceVariables[0].x);
 			}
