@@ -551,12 +551,16 @@ int IntergrateNormalizedVectorFieldFromSamples(const Real invCellSizeW, const Re
 		const HexagonalSampleInfo<Real> & sample = hexSamples[i];
 		Real cornerValues[6] = { boundary_potential[sample.fineNodes[0]], boundary_potential[sample.fineNodes[1]], boundary_potential[sample.fineNodes[2]], boundary_potential[sample.fineNodes[3]], boundary_potential[sample.fineNodes[4]], boundary_potential[sample.fineNodes[5]] };
 
-		//Point2D<Real> sampledDiffusedGradient = BilinearGradient(cornerValues, sample.pos);
-
 		Point2D<Real> pos = sample.pos;
-		Point2D<Real> sampledDiffusedGradient = -(Point2D<Real>((pos[1] - 1.0)*cornerValues[0] + (1.0 - pos[1])*cornerValues[1] + pos[1] * cornerValues[2] - pos[1] * cornerValues[3], (pos[0] - 1.0)*cornerValues[0] - pos[0] * cornerValues[1] + pos[0] * cornerValues[2] + (1.0 - pos[0])*cornerValues[3]));//Negative gradient
-		sampledDiffusedGradient[0] *= invCellSizeW;
-		sampledDiffusedGradient[1] *= invCellSizeH;
+
+		Point2D<Real> sampledDiffusedGradient =
+			-(Point2D<Real>(4 * pos[0] + 4 * pos[1] - 3.0, 4 * pos[0] + 4 * pos[1] - 3.0) *  cornerValues[0]
+			+ Point2D<Real>(4 * pos[0] - 1.0, 0.0) * cornerValues[1]
+			+ Point2D<Real>(0, 4 * pos[1] - 1.0) *  cornerValues[2]
+			+ Point2D<Real>(4 * pos[1], 4 * pos[0]) *  cornerValues[3]
+			+ Point2D<Real>(-4 * pos[1], -4 * pos[0] - 8 * pos[1] + 4.0) * cornerValues[4]
+			+ Point2D<Real>(-8 * pos[0] - 4 * pos[1] + 4, -4 * pos[0]) * cornerValues[5]);
+
 		Point2D<Real> aux = sample.tensor * sampledDiffusedGradient;
 		double len = Point2D<Real>::Dot(sampledDiffusedGradient, aux);
 
