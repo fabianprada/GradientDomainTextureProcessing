@@ -12,6 +12,7 @@
 #include <Src/MassAndStiffness.h>
 #include <Src/Padding.h>
 #include <Src/TexturedMeshVisualization.h>
+#include <Src/RandomJitter.h>
 
 cmdLineParameter<  char* > Mesh("mesh");
 cmdLineParameter<  char* > OutputTexture("outTexture");
@@ -785,11 +786,8 @@ int LineConvolution<Real>::Init() {
 
 	if (RandomJitter.set) {
 		printf("Jittering \n");
-		srand(time(NULL));
-		std::vector<Point2D < double >>randomOffset(mesh.vertices.size());
 		double jitterScale = 1e-3 / double(std::max<int>(textureWidth, textureHeight));
-		for (int i = 0; i < randomOffset.size(); i++) randomOffset[i] = Point2D < double >(1.0 - 2.0 * double(rand()) / double(RAND_MAX), 1.0 - 2.0 *  double(rand()) / double(RAND_MAX))*jitterScale;
-		for (int i = 0; i < mesh.triangles.size(); i++) for (int k = 0; k < 3; k++)mesh.textureCoordinates[3 * i + k] += randomOffset[mesh.triangles[i][k]];
+		AddRandomJitter(mesh.textureCoordinates, jitterScale);
 	}
 
 	ComputePadding(padding, textureWidth, textureHeight, mesh.textureCoordinates);
